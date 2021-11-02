@@ -46,6 +46,7 @@ display: flex;
 align-itmes: center;
 justify-content: center;
 padding: 0 36px;
+overflow-x: hidden;
 `
 const Logo = styled.img`
 width: 80px;
