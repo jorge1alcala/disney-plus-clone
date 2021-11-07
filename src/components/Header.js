@@ -5,27 +5,27 @@ function Header() {
     <Nav>
       <Logo src='/images/logo.svg' />
       <NavMenu>
-      <a>
+      <a href="#">
        <img src="images/home-icon.svg" alt="home logo" />
        <span>HOME</span>
       </a>
-      <a>
+      <a href="#">
        <img src="images/search-icon.svg" alt="home logo" />
        <span>SEARCH</span>
       </a>
-      <a>
+      <a href="#">
        <img src="images/watchlist-icon.svg" alt="home logo" />
        <span>WATCHLIST</span>
       </a>
-      <a>
+      <a href="#">
        <img src="images/original-icon.svg" alt="home logo" />
        <span>ORIGINAL</span>
       </a>
-      <a>
+      <a href="#">
        <img src="images/movie-icon.svg" alt="home logo" />
        <span>MOVIES</span>
        </a>
-       <a>
+       <a href="#">
        <img src="images/series-icon.svg" alt="home logo" />
        <span>SERIES</span>
       </a>
@@ -94,6 +94,9 @@ a {
       transform: scaleX(1);
       opacity: 1;
     }
+  }
+  &:link, &:visited {
+    color: #fff;
   }
 }
 

@@ -1,11 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import ImgSlader from './ImgSlader'
+import Movies from './Movies'
+import Viewers from './Viewers'
 
 function Home() {
   return (
     <Container>
       <ImgSlader />
+      <Viewers />
+      <Movies />
     </Container>
   )
 }
