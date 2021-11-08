@@ -5,7 +5,7 @@ function Header() {
     <Nav>
       <Logo src='/images/logo.svg' />
       <NavMenu>
-      <a href="#">
+      <a href="/">
        <img src="images/home-icon.svg" alt="home logo" />
        <span>HOME</span>
       </a>
@@ -25,14 +25,15 @@ function Header() {
        <img src="images/movie-icon.svg" alt="home logo" />
        <span>MOVIES</span>
        </a>
-       <a href="#">
+       <a href="/">
        <img src="images/series-icon.svg" alt="home logo" />
        <span>SERIES</span>
       </a>
       
       </NavMenu>
+      <a href="/login">
       <UserImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0P-dkpUbPeghLrHpnl8vOtj2d6hZBBnfkaQ&usqp=CAU" />
-      
+      </a>
     </Nav>
   )
 }
