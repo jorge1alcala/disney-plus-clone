@@ -1,16 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
-
-function Detail() {
-    return (
-        <div>
-            <h1>thi is the detail page</h1>
-        </div>
-    )
-}
-
-export default Detail
-=======
 import styled from 'styled-components'
 
 function Detail() {
@@ -172,4 +160,3 @@ const Description = styled.div`
   color: rgb(249,249,249);
   max-width: 760px;
 `
->>>>>>> ec9a09f06d2a883f4a965d16b18b9c017a1eae23
