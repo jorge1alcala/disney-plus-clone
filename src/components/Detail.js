@@ -115,6 +115,7 @@ const TrailerButton = styled(PlayButton)`
   &:hover, &:active {
     color: #333;
     font-weight: 500;
+  }
 `
 
 const AddButton = styled.button`
@@ -132,8 +133,10 @@ const AddButton = styled.button`
     font-size: 30px;
     color: white;
   }
+  
   &:hover, &:active {
-    background-color: rgb(0,0,0);
+    color: #333;
+    font-weight: 500;
   }
 
 `
