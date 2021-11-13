@@ -5,27 +5,12 @@ import Movies from "./Movies";
 import Viewers from "./Viewers";
 import { collection, getDocs } from "firebase/firestore"; 
 import db from "../firebase";
+import { useDispatch } from "react-redux"
+import { setMovies } from "../features/movies/movieSlice"
 
 function Home() {
-  // useEffect(() => {
-  //   db.collection("novies").onSnapshot((snapshot) => {
-  //     let tempMovies = snapshot.docs.map((doc) => {
-  //       console.log(doc.data());
-  //       return { id: doc.id, ...doc.data() };
-  //     });
-  //     console.log(tempMovies);
-  //   });
-  // });
-
-  // const asyncFunction = async () => {
-
-  //     const querySnapshot = await getDocs(collection(db, "movies"))
-  //       let tempMovies = querySnapshot.forEach((doc) => {
-  //         return { id: doc.id, ...doc.data()}
-  //       });
-  //  console.log(tempMovies);
-  //   }
-
+  const dispatch = useDispatch()
+  
   useEffect(() => {
 
     async function getMovies() {
@@ -34,7 +19,7 @@ function Home() {
       const tempMovies = moviesSnapshot.docs.map((doc) => {
          return {id: doc.id, ...doc.data()};
     })
-    console.log(tempMovies);
+    dispatch(setMovies(tempMovies));
   };
      getMovies();
   }, [])
