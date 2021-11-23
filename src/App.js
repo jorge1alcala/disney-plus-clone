@@ -10,7 +10,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { useEffect } from 'react';
+
 
 function App() {
   return (
