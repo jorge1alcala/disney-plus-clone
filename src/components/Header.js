@@ -11,19 +11,19 @@ function Header() {
        <img src="images/home-icon.svg" alt="home logo" />
        <span>HOME</span>
       </a>
-      <a href="#">
+      <a href="/">
        <img src="images/search-icon.svg" alt="home logo" />
        <span>SEARCH</span>
       </a>
-      <a href="#">
+      <a href="/">
        <img src="images/watchlist-icon.svg" alt="home logo" />
        <span>WATCHLIST</span>
       </a>
-      <a href="#">
+      <a href="/">
        <img src="images/original-icon.svg" alt="home logo" />
        <span>ORIGINAL</span>
       </a>
-      <a href="#">
+      <a href="/">
        <img src="images/movie-icon.svg" alt="home logo" />
        <span>MOVIES</span>
        </a>
