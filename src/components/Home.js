@@ -1,29 +1,29 @@
-import React, { useEffect } from 'react'
-import styled from 'styled-components'
-import ImgSlader from './ImgSlader'
-import Movies from './Movies'
-import Viewers from './Viewers'
-import db from '../firebase'
-import "firebase/compat/firestore"
-import { getFirestore, collection, query, where, getDocs } from "firebase/firestore";
-
+import React, { useEffect } from "react";
+import styled from "styled-components";
+import ImgSlader from "./ImgSlader";
+import Movies from "./Movies";
+import Viewers from "./Viewers";
+import db from "../firebase";
+import "firebase/compat/firestore";
+import { useDispatch } from "react-redux";
+import { setMovies } from "../features/movies/movieSlice";
+import { collection, getDocs } from "firebase/firestore";
 
 function Home() {
-  const dispatch = useDispatch()
-  
-  useEffect(() => {
+  const dispatch = useDispatch();
 
+  useEffect(() => {
     async function getMovies() {
-      const movieCol = collection(db, 'movies');
+      const movieCol = collection(db, "movies");
       const moviesSnapshot = await getDocs(movieCol);
       const tempMovies = moviesSnapshot.docs.map((doc) => {
-         return {id: doc.id, ...doc.data()};
-    })
-    dispatch(setMovies(tempMovies));
-  };
-     getMovies();
-  }, [])
-   
+        return { id: doc.id, ...doc.data() };
+      });
+      dispatch(setMovies(tempMovies));
+    }
+    getMovies();
+  }, [dispatch]);
+
   return (
     <Container>
       <ImgSlader />
