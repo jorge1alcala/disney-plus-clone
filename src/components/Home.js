@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
-import ImgSlader from "./ImgSlader";
-import Movies from "./Movies";
-import Viewers from "./Viewers";
-import { collection, getDocs } from "firebase/firestore"; 
-import db from "../firebase";
-import { useDispatch } from "react-redux"
-import { setMovies } from "../features/movies/movieSlice"
+import React, { useEffect } from 'react'
+import styled from 'styled-components'
+import ImgSlader from './ImgSlader'
+import Movies from './Movies'
+import Viewers from './Viewers'
+import db from '../firebase'
+import "firebase/compat/firestore"
+import { getFirestore, collection, query, where, getDocs } from "firebase/firestore";
+
 
 function Home() {
   const dispatch = useDispatch()
