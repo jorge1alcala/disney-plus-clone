@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <Nav>
@@ -29,9 +30,10 @@ function Header() {
           <span>SERIES</span>
         </a>
       </NavMenu>
-      <a href="/login">
-        <UserImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0P-dkpUbPeghLrHpnl8vOtj2d6hZBBnfkaQ&usqp=CAU" />
-      </a>
+
+      <Link to={"/login"}>
+        <UserImg src="/images/jorgeAlcala.jpg" />
+      </Link>
     </Nav>
   );
 }
